@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Predict Thyroid</title>
+	<link rel="stylesheet" href="../static/bootstrap.min.css">
+	<script src="../static/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+	<header>
+		<div class="header">
+			<p>
+				<a href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOME&nbsp;&nbsp;</a>
+				<a href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HISTORY</a>
+				<a href="{{ url_for('predict')}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CHECK</a>
+			</p>
+		</div>
+	</header>
+	<div class="middle">
+		<img src="{{ url_for('static', filename='../static/doc.jpg') }}"></img>
+		<div class="textcontent">
+			<p>
+				The thyroid gland is a vital hormone gland: It plays a major role in the metabolism, growth and development of the human body. It helps to regulate many body functions by constantly releasing a steady amount of thyroid hormones into the bloodstream. <br> This organ is found at the front of the neck, under the voice box. It is butterfly-shaped: The two side lobes lie against and around the windpipe (trachea), and are connected at the front by a narrow strip of tissue.
+			</p>
+		</div>
+		<div class="type1">
+			<p>Symptoms of hypothyroidism</p>
+			<ul>
+				<li>Weight gain</li>
+				<li>Depression</li>
+				<li>Fatigue</li>
+				<li>Hair loss</li>
+				<li>Memory loss</li>
+				<li>Dry, rough skin</li>
+				<li>Muscle cramps</li>
+			</ul>
+		</div>
+		<div class="type2">
+			<p>Symptoms of hyperthyroidism</p>
+			<ul>
+				<li>Restlessness</li>
+				<li>Difficulty sleeping</li>
+				<li>Anxiety</li>
+				<li>Weakness</li>
+				<li>Weight loss</li>
+				<li>Sweating</li>
+				<li>Nervousness</li>
+			</ul>
+		</div>
+		<div class="check">
+			<button onclick="window.location.href='{{ url_for('predict')}}';">CHECK FOR THYROID</button>
+		</div>
+	</div>
+	<footer>
+		<div class="footer">
+			<a href="">Admin</a>
+		</div>
+	</footer>
+</body>
+</html>

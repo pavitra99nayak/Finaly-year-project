@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+  <head>
+  <title>Predict Thyroid</title>
+  <link rel="stylesheet" href="../static/bootstrap.min.css">
+  <script src="../static/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+  <div class="prediction">
+  	<p>Thyroid Prediction</p>
+      <form action="{{ url_for('predictt')}}" method="POST" style="padding-top: 20px;">
+      	<input type="text" name="age" placeholder="Age" required="required" /><br><br>
+        <input type="text" name="sex" placeholder="Sex" required="required" /><br><br>
+  		  <input type="text" name="on_thyroxine" placeholder="On_thyroxine" required="required" /><br><br>
+        <input type="text" name="Query_on_thyroxine" placeholder="Query_on_thyroxine" required="required" /><br><br>
+        <input type="text" name="On_antithyroid_medication" placeholder="On_antithyroid_medication" required="required" /><br><br>
+        <input type="text" name="Sick" placeholder="Sick" required="required" /><br><br>
+        <input type="text" name="Pregnant" placeholder="Pregnant" required="required" /><br><br>
+        <input type="text" name="Thyroid_surgery" placeholder="Thyroid_surgery" required="required" /><br><br>
+        <input type="text" name="I131_treatment" placeholder="I131_treatment" required="required" /><br><br>
+        <input type="text" name="Query_hypothyroid" placeholder="Query_hypothyroid" required="required" /><br><br>
+        <input type="text" name="Query_hyperthyroid" placeholder="Query_hyperthyroid" required="required" /><br><br>
+        <input type="text" name="Lithium" placeholder="Lithium" required="required" /><br><br>
+        <input type="text" name="Goitre" placeholder="Goitre" required="required" /><br><br>
+        <input type="text" name="Tumor" placeholder="Tumor" required="required" /><br><br>
+        <input type="text" name="Hypopituitary" placeholder="Hypopituitary" required="required" /><br><br>
+        <input type="text" name="Psych" placeholder="Psych" required="required" /><br><br>
+        <input type="text" name="TSH" placeholder="TSH" required="required" /><br><br>
+        <input type="text" name="T3" placeholder="T3" required="required" /><br><br>
+        <input type="text" name="TT4" placeholder="TT4" required="required" /><br><br>
+        <input type="text" name="T4U" placeholder="T4U" required="required" /><br><br>
+        <input type="text" name="FTI" placeholder="FTI" required="required" /><br><br>
+        <button type="submit">Predict</button>
+      </form><br>
+     <p class="pred">{{ prediction_text }}</p>
+     <div id="dis">
+    
+     </div>
+      <button class="back" onclick="window.location.href='{{ url_for('index')}}';">Back</button>
+  </div>
+</body>
+</html>
